@@ -1,0 +1,116 @@
+.netflix-navbar {
+  background-color: #141414;
+  padding: 0.65rem 4%;
+  min-height: 68px;
+}
+
+.netflix-navbar .container-fluid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.netflix-brand {
+  color: #e50914 !important;
+  font-weight: 700;
+  font-size: 1.65rem;
+  letter-spacing: 0.02em;
+  font-family:
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-right: 2rem;
+}
+
+.netflix-brand:hover,
+.netflix-brand:focus {
+  color: #f40612 !important;
+}
+
+.netflix-nav .nav-link {
+  color: #ffffff !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+}
+
+.netflix-nav .nav-link:hover {
+  color: #b3b3b3 !important;
+}
+
+.netflix-nav .nav-link.active {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+.netflix-search-form {
+  align-items: stretch;
+  gap: 0;
+}
+
+.netflix-search-input {
+  min-width: 180px;
+  max-width: 260px;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #fff;
+  background-color: #ffffff;
+  color: #000;
+}
+
+.netflix-search-input::placeholder {
+  color: #8c8c8c;
+}
+
+.netflix-search-input:focus {
+  border-color: #fff;
+  box-shadow: none;
+}
+
+.netflix-search-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  min-height: 38px;
+  padding: 0;
+  border-radius: 0 4px 4px 0;
+  border: 1px solid #e50914;
+  background-color: transparent;
+  color: #e50914;
+}
+
+.netflix-search-btn:hover {
+  background-color: rgba(229, 9, 20, 0.15);
+  border-color: #e50914;
+  color: #e50914;
+}
+
+.netflix-search-btn:focus {
+  box-shadow: 0 0 0 0.2rem rgba(229, 9, 20, 0.35);
+}
+
+.netflix-navbar .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.netflix-navbar .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+@media (max-width: 991px) {
+  .netflix-navbar .navbar-collapse {
+    padding-top: 1rem;
+  }
+
+  .netflix-search-input {
+    max-width: none;
+    flex: 1;
+  }
+}
