@@ -22,10 +22,9 @@ const Banner = () => {
           {error?.message ?? '영화 정보를 불러오지 못했습니다. .env에 REACT_APP_API_KEY를 확인하세요.'}
         </Alert>
       )}
-      {!isLoading && !isError && data && <span className="banner__label"></span>}
-      <div className='text-white banner-text-area'>
-        <h1>{data?.results[0].title}</h1>
-      <p>{data?.results[0].overview}</p>
+      <div className="text-white banner-text-area">
+        <h1>{data?.results?.[0]?.title}</h1>
+        <p>{data?.results?.[0]?.overview}</p>
       </div>
     </div>
   );
