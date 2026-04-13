@@ -1,13 +1,26 @@
 import React from 'react';
 import { usePopularMoviesQuery } from '../../../../hooks/usePopularMovies';
-import MovieSlideSection from '../MovieSlideSection/MovieSlideSection';
-import './PopularMovieSlide.style.css';
+import MovieSlider from '../../../../common/MovieSlider/MovieSlider';
+import { responsive } from '../../../../constansts/responsive';
 
 const PopularMovieSlide = () => {
-  const query = usePopularMoviesQuery();
+  const { data, isLoading, isError, error } = usePopularMoviesQuery();
+
+  if (isLoading) {
+    return <h1>Loading...</h1>;
+  }
+
+  if (isError) {
+    return <h1>Error: {error?.message}</h1>;
+  }
+
   return (
     <div className="popular-movie-slide">
-      <MovieSlideSection title="Popular Movies" {...query} />
+      <MovieSlider
+        title="Popular Movies"
+        movies={data?.results}
+        responsive={responsive}
+      />
     </div>
   );
 };

@@ -24,4 +24,40 @@
   justify-content: center;
   height: 100%;
   padding: 2rem;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+.banner-text-area h1 {
+  margin-bottom: 0.75rem;
+}
+
+.banner-text-area p {
+  line-height: 1.35;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: 62vh;
+  }
+
+  .banner-text-area {
+    width: 72%;
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-text-area {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .banner-text-area h1 {
+    font-size: 1.6rem;
+  }
+
+  .banner-text-area p {
+    font-size: 1.05rem;
+  }
 }
