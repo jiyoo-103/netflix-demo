@@ -4,11 +4,7 @@ import MovieSlider from '../../../../common/MovieSlider/MovieSlider';
 import { responsive } from '../../../../constansts/responsive';
 
 const PopularMovieSlide = () => {
-  const { data, isLoading, isError, error } = usePopularMoviesQuery();
-
-  if (isLoading) {
-    return <h1>Loading...</h1>;
-  }
+  const { data, isError, error } = usePopularMoviesQuery();
 
   if (isError) {
     return <h1>Error: {error?.message}</h1>;
