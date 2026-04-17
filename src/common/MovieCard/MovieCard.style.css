@@ -1,3 +1,8 @@
+.movie-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .movie-card {
   width: 100%;
   max-width: 220px;
